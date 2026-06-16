@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lar</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Self-hosted household finance dashboard for humans and AI agents">
+<link rel="manifest" href="/static/manifest.json">
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="/static/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/static/icon-192.png">
+<meta name="theme-color" content="#0071e3">
+<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+<div class="container">
+  <button class="theme-btn" id="themeBtn">🌙</button>
+  <button class="demo-btn" id="demoBtn" title="Toggle demo data">🎭</button>
+  <button class="demo-btn" id="roadmapBtn" title="Roadmap" style="right:5.5rem">🗺️</button>
+  <header><h1>Lar</h1><p>Household Dashboard</p></header>
+  <nav class="nav-tabs" id="nav">
+    <div class="nav-tab active" data-page="home">Home</div>
+    <div class="nav-tab" data-page="finance">Finance</div>
+    <div class="nav-tab" data-page="work">Work</div>
+    <div class="nav-tab" data-page="shopping">Shopping</div>
+  </nav>
+  <div id="page-content"></div>
+</div>
+<button class="add-btn" id="addBtn">+</button>
+<div class="footer" id="footer"></div>
+<div class="drop-zone" id="dropZone">📄 Drop receipt here</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

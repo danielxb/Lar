@@ -1,0 +1,22 @@
+name: lar
+
+services:
+  lar:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "${PORT:-7777}:7777"
+    volumes:
+      - ../data:/app/data
+    environment:
+      - PROJECT_ROOT=/app
+      - TZ=${TZ:-Australia/Sydney}
+      - WEATHER_LAT=${WEATHER_LAT:--33.87}
+      - WEATHER_LON=${WEATHER_LON:-151.21}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7777/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

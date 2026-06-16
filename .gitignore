@@ -1,0 +1,29 @@
+# Database (contains personal finance data)
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/backups/
+data/inbox/
+data/processed/
+data/invoices/
+data/.rates_cache.json
+
+# Invoice template (may contain personal signature/logo)
+template/
+
+# Environment
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+test-results/
